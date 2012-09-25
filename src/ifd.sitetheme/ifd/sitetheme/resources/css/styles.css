@@ -6385,21 +6385,6 @@ body > header #toolbar + nav .navbar-inner {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-body > header #toolbar + nav .navbar-inner .container {
-  width: 940px;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
-}
-body > header #toolbar + nav .navbar-inner .container:before,
-body > header #toolbar + nav .navbar-inner .container:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-body > header #toolbar + nav .navbar-inner .container:after {
-  clear: both;
-}
 body > header #main-nav .selected > a,
 body > header #main-nav .selected > a:hover,
 body > header #main-nav .selected > a:focus {

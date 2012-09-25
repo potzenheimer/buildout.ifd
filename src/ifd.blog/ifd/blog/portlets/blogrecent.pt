@@ -9,7 +9,7 @@
     <ul class="nav nav-list">
       <tal:block define="plone_view context/@@plone;"
         repeat="item view/items">
-        <li class="nav-header">
+        <li class="xnav-header">
           <i class="icon-file" />
           <span tal:content="item/Title">Entry Title</span>
           <small tal:content="python:plone_view.toLocalizedTime(item.Date)">

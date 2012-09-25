@@ -7,7 +7,7 @@
     <!-- Add alternativ theme templates -->
     <!-- ifd to add minimal theme template for the
          tiles editiong overlays -->
-    <!--<theme href="minimal.html" if-path="@@edit-tile" />-->
+    <theme href="minimal.html" if-path="@@edit-tile" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -47,12 +47,8 @@
         <!-- CMSUI Editbar replacements -->
         <drop css:theme="#editbar-wrapper"
             css:if-content="#anon-personalbar" />
-        <!--<replace css:theme-children="#editbar" css:content="#edit-bar" />-->
         <replace css:theme="#editbar-wrapper"
             css:content="#toolbar" />
-
-        <replace css:theme-children="#personal-tools" 
-            css:content-children="#portal-personaltools" />
 
         <!-- Logo (link target) -->
         <copy attributes="href" css:content="#portal-logo" css:theme="a.brand" />
@@ -68,10 +64,6 @@
         <replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />
 
-        <!-- Breadcrumbs -->
-        <replace css:content-children='#portal-breadcrumbs'
-            css:theme-children='#breadcrumbs' />
-
         <!-- Document Content -->
         <replace css:content-children="#content" 
             css:theme-children="#content" />
@@ -79,7 +71,9 @@
         <before css:content=".portalMessage" css:theme="#content" />
         <replace css:content-children="#viewlet-below-content"
             css:theme-children="#below-main-content" />
-
+        
+        <replace css:content-children="#infobar"
+            css:theme-children="#sidebar-info" />
         <!-- Columns -->
         <replace css:content-children="#portal-column-one > *"
             css:theme-children="#sidebar-left" />
