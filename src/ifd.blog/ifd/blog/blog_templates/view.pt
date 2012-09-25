@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="ifd.blog">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+  <!--<header class="page-header">
+    <h1 tal:content="context/Title">Title inserted here</h1>
+  </header>-->
+
+  <p class="documentDescription lead" tal:condition="context/Description"
+    tal:content="context/Description" />
+
+  <section tal:condition="view/blogitems"
+    tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
+
+    <tal:block tal:repeat="item view/blogitems">
+      <article>
+        <div class="page-header">
+          <h2><small tal:content="python:toLocalizedTime(item.effective)" /><br />
+            <a href="" tal:attributes="href item/getURL"
+                tal:content="item/Title" />
+          </h2>
+        </div>
+          <p tal:condition="item/Description"
+            tal:content="item/Description" />
+
+        <a href="" class="btn btn-small btn-inverse"
+              tal:attributes="href item/getURL">
+              <i class="icon-eye-open" />
+              Weiterlesen</a>
+      </article>
+    </tal:block>
+
+  </section>
+    
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

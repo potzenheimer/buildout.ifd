@@ -1,0 +1,37 @@
+<section id="infobar">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#profile" data-toggle="tab">Profil</a></li>
+      <li><a href="#imprint" data-toggle="tab">Kontakt</a></li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane active" id="profile">
+        <div tal:attributes="data-tile string:${viewlet/portal_url}/@@vwc.tiles.richtext/profile" />
+    </div>
+    <div class="tab-pane" id="imprint">
+        <div tal:attributes="data-tile string:${viewlet/portal_url}/@@vwc.tiles.richtext/imprint" />
+    </div>
+    <div class="visualClear">&nbsp;</div>
+    <div class="well hiddenStructure">
+        <h4>
+            <i class="icon-share" />
+            <i18n:block translate="">Follow us</i18n:block>
+        </h4>
+        <div id="infobar-social">
+        <div class="row-fluid">
+          <div class="span3">
+            <a href="https://www.facebook.com/Fleckendeckend">
+              <i class="icon-facebook-sign icon-x-large" /></a>
+          </div>
+          <div class="span3">
+            <a href="https://twitter.com/Fleckendeckend">
+            <i class="icon-twitter-sign icon-x-large" /></a>
+          </div>
+          <div class="span3">
+            <a href="http://pinterest.com/lisafigas/fleckendeckend/">
+              <i class="icon-pinterest-sign icon-x-large" />
+            </a> 
+          </div>
+        </div>
+        </div>
+  </div>
+</section>

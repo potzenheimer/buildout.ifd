@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<portlets>
+  <portlet
+    addview="ifd.blog.archive"
+    title="Monthly archive"
+    description="A blog style archive portlet"
+    />
+  <portlet
+      addview="ifd.blog.blogrecent"
+      title="Blog recent"
+      description="A blog recent entries portlet"
+      />
+  <portlet
+      addview="ifd.blog.categories"
+      title="Blog categories"
+      description="A blog categories portlet"
+      />
+</portlets>
