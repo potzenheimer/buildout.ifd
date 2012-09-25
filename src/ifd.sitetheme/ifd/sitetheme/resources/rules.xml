@@ -84,7 +84,7 @@
         <replace css:content-children="#portal-column-one > *"
             css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar-right" />
+            css:theme-children="#sidebar" />
 
     </rules>
 

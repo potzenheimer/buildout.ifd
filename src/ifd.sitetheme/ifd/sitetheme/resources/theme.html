@@ -35,7 +35,7 @@
       </div>
 
       <!-- Twitter boostrap based default navigation -->
-      <nav class="navbar">
+      <nav class="navbar navbar-static-top">
         <div class="navbar-inner">
           <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -45,7 +45,7 @@
             </a>
             <a class="brand" href="#">Project name</a>
             <div class="nav-collapse">
-              <ul class="nav" id="main-nav">
+              <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -56,16 +56,32 @@
       </nav>
     </header>
 
-    <section class="container">
-      <div id="content">
-        <h1>Starter template <small>The barebone minimal</small></h1>
-        <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+    <section class="container" id="site-wrapper">
+      <div class="row">
+        <div class="span8">
+          <section id="content">
+            <header class="page-header">
+              <h1>Starter template <small>Fixed Layout, 12 cell grid</small></h1>
+            </header>
+            <article>
+              <p>Use this document as a way to quick start any new project.<br>
+                All you get is this message and a barebones HTML document.</p>
+            </article>
+          </section>
+        </div>
+        <div class="span4">
+          <aside id="sidebar">
+            <div class="well">
+              <h2>Sidebar</h2>
+            </div>
+          </aside>
+        </div>
       </div>
     </section> <!-- /container -->
 
     <footer id="site-footer">
       <div class="container">
-        <p>&copy; ACME Corp. 2012</p>
+        <p>&copy; 2012 Integrationsfachdienst Schwaben  | info@ifd-schwaben.de</p>
       </div>
     </footer>
 
