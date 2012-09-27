@@ -5592,10 +5592,14 @@ input.datetime-widget,
 #content-core label {
   font-weight: bold;
 }
+#content-core label .formHelp {
+  font-weight: normal;
+}
 div.field {
   margin-bottom: 10px;
 }
-div.formHelp {
+div.formHelp,
+span.formHelp {
   color: #595959;
   display: block;
   margin-bottom: 10px;
