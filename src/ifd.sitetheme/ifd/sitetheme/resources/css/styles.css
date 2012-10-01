@@ -72,7 +72,8 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-#map_canvas img {
+#map_canvas img,
+.google-maps img {
   max-width: none;
 }
 button,
@@ -1090,6 +1091,10 @@ input.span1, textarea.span1, .uneditable-input.span1 {
 .controls-row [class*="span"],
 .row-fluid .controls-row [class*="span"] {
   float: left;
+}
+.controls-row .checkbox[class*="span"],
+.controls-row .radio[class*="span"] {
+  padding-top: 5px;
 }
 input[disabled],
 select[disabled],
@@ -2916,7 +2921,8 @@ button.close {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.btn-large [class^="icon-"] {
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
   margin-top: 2px;
 }
 .btn-small {
@@ -2926,7 +2932,8 @@ button.close {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.btn-small [class^="icon-"] {
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
   margin-top: 0;
 }
 .btn-mini {
@@ -3510,7 +3517,8 @@ input[type="submit"].btn.btn-mini {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #0088cc;
 }
-.nav-list [class^="icon-"] {
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
   margin-right: 2px;
 }
 .nav-list .divider {
@@ -4847,6 +4855,8 @@ a.thumbnail:hover {
 }
 .label,
 .badge {
+  display: inline-block;
+  padding: 2px 4px;
   font-size: 11.844px;
   font-weight: bold;
   line-height: 14px;
@@ -4857,13 +4867,13 @@ a.thumbnail:hover {
   background-color: #999999;
 }
 .label {
-  padding: 1px 4px 2px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .badge {
-  padding: 1px 9px 2px;
+  padding-left: 9px;
+  padding-right: 9px;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
@@ -5779,6 +5789,8 @@ dl.portalMessage dd {
 #plone-contentmenu-workflow .state-expired {
   text-shadow: none;
   border: none;
+  display: inline-block;
+  padding: 2px 4px;
   font-size: 11.844px;
   font-weight: bold;
   line-height: 14px;
@@ -5787,7 +5799,8 @@ dl.portalMessage dd {
   white-space: nowrap;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #999999;
-  padding: 1px 9px 2px;
+  padding-left: 9px;
+  padding-right: 9px;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
@@ -6377,6 +6390,9 @@ table.grid th {
 }
 .visualClear {
   clear: both;
+}
+body {
+  background: #c1bd77;
 }
 .make-some-noise {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
