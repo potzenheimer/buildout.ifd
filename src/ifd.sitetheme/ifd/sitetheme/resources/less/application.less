@@ -3,8 +3,10 @@
 
 
 body {
-    background: #c1bd77;
+    //background: @appGreenLight;
 }
+
+// #ffffcc
 
 // ifd for providing a data image via stylesheet
 // Add this class to any element to provide some extend of visual noise
@@ -42,6 +44,19 @@ body > header {
 #site-wrapper {
   padding-top: @navbarHeight;
   padding-bottom: @navbarHeight;
+  #content {
+    padding:@baseLineHeight @baseLineHeight / 2;
+  }
+}
+
+#blog-link {
+  padding: @baseLineHeight 0;
+}
+
+.well {
+  background: transparent;
+  box-shadow: none;
+  border: none;
 }
 
 // ifd styles for a HMTL5 based site footer
