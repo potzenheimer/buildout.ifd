@@ -9,15 +9,14 @@
     <ul class="nav nav-list">
       <tal:block define="plone_view context/@@plone;"
         repeat="item view/items">
-        <li class="xnav-header">
-          <i class="icon-file" />
+        <li>
           <span tal:content="item/Title">Entry Title</span>
           <small tal:content="python:plone_view.toLocalizedTime(item.Date)">
             1779</small>
         </li>
         <li>
             <a tal:attributes="href python:view.item_url(item)" class="link-more">
-               <i class="icon-plus-sign" /> mehr
+                mehr&hellip;
             </a>
         </li>
         <li class="divider"></li>

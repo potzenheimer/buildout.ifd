@@ -31,10 +31,9 @@
           <p tal:condition="item/Description"
             tal:content="item/Description" />
 
-        <a href="" class="btn btn-small btn-inverse"
+        <a href="" class="pull-right"
               tal:attributes="href item/getURL">
-              <i class="icon-eye-open" />
-              Weiterlesen</a>
+              Weiterlesen <i class="icon-caret-right" /></a>
       </article>
     </tal:block>
 

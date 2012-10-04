@@ -656,7 +656,8 @@ hr {
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
 }
-abbr[title] {
+abbr[title],
+abbr[data-original-title] {
   cursor: help;
   border-bottom: 1px dotted #999999;
 }
@@ -1691,130 +1692,84 @@ table {
 .table-hover tbody tr:hover th {
   background-color: #f5f5f5;
 }
-table [class*=span],
-.row-fluid table [class*=span] {
+table td[class*="span"],
+table th[class*="span"],
+.row-fluid table td[class*="span"],
+.row-fluid table th[class*="span"] {
   display: table-cell;
   float: none;
   margin-left: 0;
 }
-.table .span1 {
+.table td.span1,
+.table th.span1 {
   float: none;
   width: 44px;
   margin-left: 0;
 }
-.table .span2 {
+.table td.span2,
+.table th.span2 {
   float: none;
   width: 124px;
   margin-left: 0;
 }
-.table .span3 {
+.table td.span3,
+.table th.span3 {
   float: none;
   width: 204px;
   margin-left: 0;
 }
-.table .span4 {
+.table td.span4,
+.table th.span4 {
   float: none;
   width: 284px;
   margin-left: 0;
 }
-.table .span5 {
+.table td.span5,
+.table th.span5 {
   float: none;
   width: 364px;
   margin-left: 0;
 }
-.table .span6 {
+.table td.span6,
+.table th.span6 {
   float: none;
   width: 444px;
   margin-left: 0;
 }
-.table .span7 {
+.table td.span7,
+.table th.span7 {
   float: none;
   width: 524px;
   margin-left: 0;
 }
-.table .span8 {
+.table td.span8,
+.table th.span8 {
   float: none;
   width: 604px;
   margin-left: 0;
 }
-.table .span9 {
+.table td.span9,
+.table th.span9 {
   float: none;
   width: 684px;
   margin-left: 0;
 }
-.table .span10 {
+.table td.span10,
+.table th.span10 {
   float: none;
   width: 764px;
   margin-left: 0;
 }
-.table .span11 {
+.table td.span11,
+.table th.span11 {
   float: none;
   width: 844px;
   margin-left: 0;
 }
-.table .span12 {
+.table td.span12,
+.table th.span12 {
   float: none;
   width: 924px;
-  margin-left: 0;
-}
-.table .span13 {
-  float: none;
-  width: 1004px;
-  margin-left: 0;
-}
-.table .span14 {
-  float: none;
-  width: 1084px;
-  margin-left: 0;
-}
-.table .span15 {
-  float: none;
-  width: 1164px;
-  margin-left: 0;
-}
-.table .span16 {
-  float: none;
-  width: 1244px;
-  margin-left: 0;
-}
-.table .span17 {
-  float: none;
-  width: 1324px;
-  margin-left: 0;
-}
-.table .span18 {
-  float: none;
-  width: 1404px;
-  margin-left: 0;
-}
-.table .span19 {
-  float: none;
-  width: 1484px;
-  margin-left: 0;
-}
-.table .span20 {
-  float: none;
-  width: 1564px;
-  margin-left: 0;
-}
-.table .span21 {
-  float: none;
-  width: 1644px;
-  margin-left: 0;
-}
-.table .span22 {
-  float: none;
-  width: 1724px;
-  margin-left: 0;
-}
-.table .span23 {
-  float: none;
-  width: 1804px;
-  margin-left: 0;
-}
-.table .span24 {
-  float: none;
-  width: 1884px;
   margin-left: 0;
 }
 .table tbody tr.success td {
@@ -2733,6 +2688,16 @@ ul.icons li .icon-large:before {
 .dropdown-submenu:hover > a:after {
   border-left-color: #ffffff;
 }
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
 .dropdown .dropdown-menu .nav-header {
   padding-left: 20px;
   padding-right: 20px;
@@ -2762,9 +2727,9 @@ ul.icons li .icon-large:before {
 }
 .well-large {
   padding: 24px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .well-small {
   padding: 9px;
@@ -3974,17 +3939,17 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner {
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.1);
-  -moz-box-shadow: inset 0 -1px 0 rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.1);
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+  box-shadow: 0 1px 10px rgba(0,0,0,.1);
 }
 .navbar-fixed-bottom {
   bottom: 0;
 }
 .navbar-fixed-bottom .navbar-inner {
-  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.1), 0 -1px 10px rgba(0,0,0,.1);
-  -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.1), 0 -1px 10px rgba(0,0,0,.1);
-  box-shadow: inset 0 1px 0 rgba(0,0,0,.1), 0 -1px 10px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+  box-shadow: 0 -1px 10px rgba(0,0,0,.1);
 }
 .navbar .nav {
   position: relative;
@@ -5313,22 +5278,21 @@ a.badge:hover {
   font-weight: normal;
 }
 .visualHighlight {
-  background-color: #ffc40d;
+  background-color: #e64c0e;
+  color: #ffffff;
 }
 .pullquote {
-  line-height: 20px;
   float: right;
   width: 35%;
   clear: right;
-  color: #999999;
-  font-size: 14px;
+  color: #555555;
+  font-size: 18px;
   font-weight: 300;
   line-height: 25px;
-  line-height: 17px;
+  line-height: 20px;
   padding: 10px 20px;
   margin: 20px 0 20px 20px;
-  border-left: 5px solid #999999;
-  background: #eeeeee;
+  border-left: 2px solid #999999;
 }
 .callout {
   background: #eeeeee;
@@ -5358,7 +5322,6 @@ img.image-left,
 img.image-right,
 .captioned img {
   display: block;
-  padding: 4px;
   line-height: 20px;
   border: 1px solid #ddd;
   -webkit-border-radius: 4px;
@@ -5371,6 +5334,13 @@ img.image-right,
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 dd.image-caption {
   text-align: left;
@@ -6420,12 +6390,49 @@ body > header #main-nav .selected > a:focus {
   padding: 20px 10px;
 }
 #blog-link {
+  margin-top: 40px;
   padding: 20px 0;
+  font-size: 20px;
 }
 .well {
   background: transparent;
   box-shadow: none;
   border: none;
+}
+dl.portletTwitterPortlet {
+  padding: 20px;
+}
+dl.portletTwitterPortlet dt.portletHeader {
+  font-size: 15px;
+}
+dl.portletTwitterPortlet dt.portletHeader .portletTopLeft:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: .8em;
+  content: "\f081";
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf081;&nbsp;');
+}
+dl.portletTwitterPortlet .portletItem {
+  padding: 10px 0;
+}
+dl.portletTwitterPortlet .portletItem .tweetPicture {
+  padding: 1px 6px;
+}
+dl.portletTwitterPortlet .portletItem .tweetText {
+  line-height: 14px;
+}
+dl.portletTwitterPortlet .portletItem .tweetText .tweetBody {
+  font-size: 11.9px;
+  font-weight: 300;
+  line-height: 14px;
+}
+dl.portletTwitterPortlet .portletItem .tweetDate {
+  text-align: right;
+  color: #999999;
+  font-size: 11.9px;
 }
 body > footer {
   margin-top: 20px;

@@ -23,7 +23,8 @@
 }
 
 .visualHighlight {
-    background-color: @yellow;
+    background-color: @appRed;
+    color: @white;
 }
 
 .pullquote {
@@ -32,13 +33,13 @@
     float: right;
     width: 35%;
     clear: right;
-    color: @grayLight;
-    #font > .shorthand(14px,300,@baseLineHeight * 1.25);
-    line-height: @baseLineHeight - 3;
+    color: @gray;
+    #font > .shorthand(18px,300,@baseLineHeight * 1.25);
+    line-height: @baseLineHeight;
     padding: @baseLineHeight / 2 @baseLineHeight;
     margin: @baseLineHeight 0 @baseLineHeight @baseLineHeight;
-    border-left: 5px solid @grayLight;
-    background: @grayLighter;
+    border-left: 2px solid @grayLight;
+    //background: @grayLighter;
 }
 .callout {
     background: @grayLighter;
@@ -68,6 +69,7 @@ img.image-left,
 img.image-right,
 .captioned img {
     .thumbnail();
+    .img-polaroid();
 }
 dd.image-caption {
     text-align: left;
