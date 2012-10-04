@@ -27,4 +27,5 @@ src/plone.tiles
 src/vwc.tiles
 src/vwc.toolbar
 src/sauna.reload
+src/collective.disqus
 src/watchdog
