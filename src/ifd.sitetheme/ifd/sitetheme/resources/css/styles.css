@@ -5315,6 +5315,13 @@ a.badge:hover {
 }
 .image-inline {
   float: none;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 /*note: the tricky thing here is that image-inline|image-left|image-right
 can both be on an image and a wrapper element e.g. a dl tag*/

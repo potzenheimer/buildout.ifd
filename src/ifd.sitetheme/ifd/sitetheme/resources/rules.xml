@@ -15,6 +15,9 @@
         <notheme if="$ajax_load" />          
         <theme href="theme.html" />
         
+        <replace theme="/html/head/title" content="/html/head/title" />
+        <replace theme="/html/head/base" content="/html/head/base" />
+
         <!-- Add meta tags -->
         <drop theme="/html/head/meta" />
         
