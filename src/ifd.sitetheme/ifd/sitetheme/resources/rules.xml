@@ -37,10 +37,10 @@
         <drop theme="/html/head/link" />
 
         <!-- Custom favicon implementation -->
-        <!--<drop content="link[@type='image/x-icon']" />
+        <drop content="link[@type='image/x-icon']" />
         <after theme="/html/head">
-            <link rel="shortcut icon" href="/++theme++ifd.jmstheme/img/favicon.ico" type="images/x-icon" />
-        </after>-->
+            <link rel="shortcut icon" href="/++theme++ifd.sitetheme/img/favicon.ico" type="images/x-icon" />
+        </after>
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
@@ -55,13 +55,6 @@
 
         <!-- Logo (link target) -->
         <copy attributes="href" css:content="#portal-logo" css:theme="a.brand" />
-
-        <!-- Site actions -->
-        <!--<replace css:content="#portal-siteactions li" css:theme-children="#global-nav" />-->
-
-        <!-- Portal searchbox -->
-        <!--<copy attributes="action" css:content="#portal-searchbox form"
-            css:theme="#portal-searchbox" />-->
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
@@ -82,6 +75,9 @@
             css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
+
+        <replace css:content-children="#footer-infobar"
+            css:theme-children="#footer-content" />
 
     </rules>
 

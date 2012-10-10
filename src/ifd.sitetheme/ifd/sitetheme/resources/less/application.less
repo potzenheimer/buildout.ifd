@@ -41,11 +41,47 @@ body > header {
     }
 }
 
+#logo-wrapper {
+  margin-bottom: @baseLineHeight / 2;
+  padding-left: @baseLineHeight;
+  #logo {
+    display: block;
+    .img-polaroid();
+    .size(209px, 300px);
+    background:url(../img/logo.jpg) no-repeat 0 0 transparent;
+    text-indent: -99999px;
+    overflow: hidden;
+  }
+}
+
 #site-wrapper {
   padding-top: @navbarHeight;
   padding-bottom: @navbarHeight;
   #content {
-    padding:@baseLineHeight @baseLineHeight / 2;
+    padding: 0 @baseLineHeight / 2 @baseLineHeight;
+  }
+  #sidebar-info {
+    padding: 0 @baseLineHeight;
+  }
+}
+
+#blog-view {
+  article {
+    clear: both;
+    border-bottom: 1px solid @grayLighter;
+    .page-header {
+      border: none;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+    }
+    footer {
+      text-align: right;
+      margin-bottom: @baseLineHeight;
+      .link-more {
+        clear: both;
+        display: block;
+      }
+    }
   }
 }
 

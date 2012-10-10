@@ -10,15 +10,17 @@
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
 
-  <header class="page-header" id="blog-header">
-    <h1>Integrationsfachdienst &ndash;
-      <small><em>Blog</em></small>
+  <!--<header class="xpage-header" id="blog-header">
+    <h1>Integrationsfachdienst Schwaben
     </h1>
-  </header>
+  </header>-->
 
+<!--
   <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/introduction" />
-
-  <section tal:condition="view/blogitems"
+-->
+  <section
+    id="blog-view"
+    tal:condition="view/blogitems"
     tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                 Batch python:modules['Products.CMFPlone'].Batch;
                 b_size python:5;b_start python:0;b_start request/b_start | b_start;">
@@ -43,10 +45,11 @@
                 <div tal:content="structure item/text/output" />
             </div>
           </tal:block>
-
-          <a href="" class="pull-right"
+          <footer>
+          <a href="" class="link-more xpull-right"
             tal:attributes="href item/getURL">
             Weiterlesen <i class="icon-caret-right" /></a>
+          </footer>
       </article>
     </tal:block>
     </tal:entries>
