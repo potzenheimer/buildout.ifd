@@ -6444,9 +6444,14 @@ body > header #main-nav .selected > a:focus {
   background: transparent;
   box-shadow: none;
   border: none;
+  padding: 0 19px;
+  margin-bottom: 0;
 }
-dl.portletTwitterPortlet {
-  padding: 20px;
+#infobox-blog-categories {
+  padding-top: 10px;
+}
+#infobox-blog-categories .nav {
+  margin-left: 10px;
 }
 dl.portletTwitterPortlet dt.portletHeader {
   font-size: 15px;
