@@ -7,7 +7,7 @@
         <i18n:block translate="">Categories</i18n:block>
     </h4>
 
-    <ul class="nav nav-pills nav-stacked"
+    <ul class="nav xnav-pills nav-stacked"
         tal:define="keywords view/keywords">
         <li tal:define="blog_url view/blog_url">
           <a href="" tal:attributes="href blog_url">
