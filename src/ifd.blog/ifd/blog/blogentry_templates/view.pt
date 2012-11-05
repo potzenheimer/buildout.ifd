@@ -22,7 +22,7 @@
     <section tal:condition="context/text">
       <div tal:replace="structure context/text/output" />
     </section>
-    <aside>
+    <aside class="visualClear">
       <div tal:content="structure provider:plone.belowcontenttitle" />
     </aside>
   </article>
