@@ -19,8 +19,8 @@
   <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/introduction" />
 -->
   <div id="rss-link" class="pull-right"
-    tal:define="portal_url context/portal_url">
-    <a href="" tal:attributes="href python:portal_url + '/blog/rss'"
+    tal:define="portal_url context/portal_url;">
+    <a href="" tal:attributes="href python:portal_url + '/search_rss?advanced_search=False&created.query:date:list:record=1970/01/02%2000%3A00%3A00%20GMT%2B0&created.range:record=min&portal_type:list=ifd.blog.blogentry&sort_on=Date&SearchableText=&sort_order=reverse&b_start:int=0&pt_toggle=%23'"
       data-appui="tooltip"
       data-placement="left"
       data-original-title="Abonnieren Sie einen stehts aktuellen RSS Feed">
