@@ -128,7 +128,7 @@ textarea {
   clear: both;
 }
 .hide-text {
-  font: a;
+  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -6371,9 +6371,11 @@ table.grid th {
 .make-some-noise {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
 }
+body > header #editbar-wrapper + nav,
 body > header #toolbar + nav {
   margin-top: 40px;
 }
+body > header #editbar-wrapper + nav .navbar-inner,
 body > header #toolbar + nav .navbar-inner {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -6402,9 +6404,9 @@ body > header #main-nav .selected > a:focus {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  height: 209px;
-  background: url(../img/logo.jpg) no-repeat 0 0 transparent;
+  width: 290px;
+  height: 244px;
+  background: url(../img/ifd-schwaben.jpg) no-repeat 0 0 transparent;
   text-indent: -99999px;
   overflow: hidden;
 }
