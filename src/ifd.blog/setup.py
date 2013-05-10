@@ -26,7 +26,7 @@ setup(name='ifd.blog',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'plone.app.dexterity',
+          'plone.app.dexterity[grok, relations]',
           'plone.namedfile [blobs]',
           'plone.formwidget.recaptcha',
           'collective.upload',
