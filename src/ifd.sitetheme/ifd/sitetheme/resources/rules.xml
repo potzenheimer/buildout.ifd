@@ -54,7 +54,7 @@
             css:content="#toolbar" />
 
         <!-- Logo (link target) -->
-        <copy attributes="href" css:content="#portal-logo" css:theme="a.brand" />
+        <copy attributes="href" css:content="#portal-logo" css:theme="a.navbar-brand" />
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
