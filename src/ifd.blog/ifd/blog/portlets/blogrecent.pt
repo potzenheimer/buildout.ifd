@@ -19,7 +19,7 @@
                 mehr&hellip;
             </a>
         </li>
-        <li class="divider"></li>
+        <li class="divider"><hr></li>
       </tal:block>
     </ul>
 </div>

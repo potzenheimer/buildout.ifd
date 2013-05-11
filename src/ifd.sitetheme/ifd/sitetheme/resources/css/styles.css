@@ -5899,6 +5899,10 @@ body > header .navbar-brand {
   clear: both;
   display: block;
 }
+.visualHighlight {
+  background: #e64c0e;
+  color: #fff;
+}
 #blog-link {
   margin-top: 40px;
   padding: 20px 0;
