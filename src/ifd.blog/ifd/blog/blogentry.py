@@ -16,6 +16,7 @@ class IBlogEntry(form.Schema, IImageScaleTraversable):
     """
     A single blogentry that can contain images
     """
+    form.primary('text')
     text = RichText(
         title=_(u"Blog Entry"),
         description=_(u"Please enter main body text for this blog entry"),
