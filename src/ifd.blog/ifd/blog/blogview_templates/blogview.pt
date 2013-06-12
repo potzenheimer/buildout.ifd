@@ -20,7 +20,7 @@
 -->
   <div id="rss-link" class="pull-right"
     tal:define="portal_url context/portal_url;">
-    <a href="" tal:attributes="href python:portal_url + '/RSS'"
+    <a href="" tal:attributes="href python:portal_url + '/ifd/RSS'"
       data-appui="tooltip"
       data-placement="bottom"
       data-original-title="Abonnieren Sie einen stehts aktuellen RSS Feed">

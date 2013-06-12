@@ -11,7 +11,7 @@ env.hosts = ['${fabric:host}']
 env.webserver = '${fabric:webserver}'
 env.code_root = '${fabric:directory}'
 env.local_root = '${buildout:directory}'
-env.sitename = 're'
+env.sitename = 'ifd'
 env.code_user = 'root'
 env.prod_user = 'www'
 

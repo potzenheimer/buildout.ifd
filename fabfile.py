@@ -11,7 +11,7 @@ env.hosts = ['zope8']
 env.webserver = '/opt/webserver/buildout.webserver'
 env.code_root = '/opt/sites/ifd/buildout.ifd'
 env.local_root = '/Users/cb/dev/ifd/buildout.ifd'
-env.sitename = 're'
+env.sitename = 'ifd'
 env.code_user = 'root'
 env.prod_user = 'www'
 
