@@ -21,7 +21,6 @@
     <tal:block tal:repeat="item batch">
       <article>
         <div class="page-header">
-          
           <h2><small tal:content="python:toLocalizedTime(item.effective)" /><br />
             <a href="" tal:attributes="href item/getURL"
                 tal:content="item/Title" />
