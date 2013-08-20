@@ -2,60 +2,93 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>ifd Theme, based on Twitter Bootstrap</title>
+    <base />
+    <title>Example Theme, based on Twitter Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/styles.css" rel="stylesheet">
-    <!-- Responsive styles - enable if necessary -->
-    <link href="css/responsive.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<link href="less/styles.less" rel="stylesheet/less" type="text/css">    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-    <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
-    <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
-  </head>
-
+<script data-ui="development" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script data-ui="development" type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
+<script data-ui="development" type="text/javascript" src="assets/js/less-1.4.1.min.js"></script>
+<script data-ui="development" src="assets/js/bootstrap.min.js"></script>
+<script data-ui="development" src="js/application.js"></script>  </head>
   <body>
+  
+  <body>
+    <a href="#content" class="sr-only">Skip to content</a>
+    <header class="site-topbar" id="topbar">
+      <div class="navbar navbar-inverse navbar-fixed-top app-toolbar" id="app-toolbar">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-toolbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand visible-xs" href="#">CMS Toolbar</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-toolbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Inhalte</a></li>
+          <li><a href="#">Anzeigen</a></li>
+          <li><a href="#">Bearbeiten</a></li>
+          <li><a href="#">Freigabe</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+        <p class="navbar-text pull-right">CMS Toolbar</p>
+    <ul class="nav navbar-nav pull-right">
+  <li id="plone-personal-actions" class="dropdown dropdown-userinfo">
+    <a data-toggle="dropdown" class="dropdown-toggle" href="/author/123456789">
+      <span>John Doe</span>
+      <b class="caret">
+    </b></a>
+    <ul class="dropdown-menu"><li id="plone-personal-actions-dashboard">
+        <a href="/dashboard">Persönliche Seite</a>
+      </li>
+      <li id="plone-personal-actions-preferences">
+        <a href="/preferences">Meine Einstellungen</a>
+      </li>
+      <li id="plone-personal-actions-plone_setup">
+        <a href="/controlpanel">Konfiguration</a>
+      </li>
+      <li id="plone-personal-actions-logout">
+        <a href="/logout">Abmelden</a>
+      </li>
+    </ul></li>
+</ul>    </div>
+</div>
+      <nav class="navbar navbar-default app-navbar" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-app1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Integrationsfachdienst Schwaben Blog</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-app1-collapse">
+      <ul class="nav navbar-nav navbar-right" id="app-navbar">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Was ist der IFD?</a></li>
+      </ul>
+    </div><!-- /.nav-collapse -->
+  </div><!-- /.container -->
+</nav><!-- /.navbar -->    </header>
 
-    <header id="topbar">
-      <div id="editbar-wrapper" class="navbar navbar-fixed-top">
-        <div class="container" id="editbar">
-          <a class="navbar-brand" href="#">CMS Editbar</a>
-            <!-- Plone CMS Editbar inserted as a toolbar -->
-        </div>
-      </div>
-
-      <!-- Twitter boostrap based default navigation -->
-      <nav class="navbar navbar-static-top">
-          <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Integrationsfachdienst Schwaben Blog</a>
-            <div class="nav-collapse collapse navbar-responsive-collapse pull-right">
-              <ul class="nav navbar-nav" id="main-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-      </nav>
-    </header>
-
-    <section class="container" id="site-wrapper">
+    <section class="site-container container" id="site-wrapper">
       <div class="row">
         <div class="col col-lg-8">
-          <section id="content">
+          <section class="site-content" id="content">
             <header class="page-header">
               <h1>Starter template <small>Fixed Layout, 12 cell grid</small></h1>
             </header>
@@ -69,16 +102,16 @@
           </aside>
         </div>
         <div class="col col-lg-4">
-          <div id="logo-wrapper">
-            <a href="/" id="logo">
+          <div class="site-brand" id="logo-wrapper">
+            <a class="site-brand-logo" id="logo" href="/">
               Integrationsfachdienst Schwaben</a>
           </div>
-          <aside id="sidebar-info">
+          <aside class="sidebar" id="app-sidebar-info">
           </aside>
           <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ifdArbeit"  data-widget-id="344919453710053376" data-link-color="#cc0000" height="400" data-chrome="noborder" data-tweet-limit="3">Tweets von @ifdArbeit</a>
           <div class="visualClear">&nbsp;</div>
           <a class="twitter-timeline"  href="https://twitter.com/remSchwaben"  data-widget-id="344938176873385985" data-link-color="#cc0000" height="400" data-chrome="noborder" data-tweet-limit="3">Tweets von @remSchwaben</a>
-          <aside id="sidebar">
+          <aside class="sidebar" id="app-sidebar">
             <div class="well">
               <h2>Sidebar</h2>
             </div>
@@ -87,16 +120,12 @@
       </div>
     </section> <!-- /container -->
 
-    <footer id="site-footer">
-      <div class="container" id="footer-content">
+    <footer class="site-footer" id="site-footer">
+      <div class="site-footer-content container" id="footer-content">
         <p>&copy; 2012 Integrationsfachdienst Schwaben  | info@ifd-schwaben.de</p>
       </div>
     </footer>
-
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<!-- Piwik -->
-<script type="text/javascript">
+    <script type="text/javascript">
 var pkBaseURL = (("https:" == document.location.protocol) ? "https://fuenfzueins.vorwaerts-werbung.de/piwik/" : "http://fuenfzueins.vorwaerts-werbung.de/piwik/");
 document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 </script><script type="text/javascript">
@@ -105,7 +134,6 @@ var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 13);
 piwikTracker.trackPageView();
 piwikTracker.enableLinkTracking();
 } catch( err ) {}
-</script><noscript><p><img src="http://fuenfzueins.vorwaerts-werbung.de/piwik/piwik.php?idsite=13" style="border:0" alt="" /></p></noscript>
-<!-- End Piwik Tracking Code -->
-  </body>
+</script><noscript><p><img src="http://fuenfzueins.vorwaerts-werbung.de/piwik/piwik.php?idsite=13" style="border:0" alt="" /></p></noscript>  </body>
+</html>  </body>
 </html>

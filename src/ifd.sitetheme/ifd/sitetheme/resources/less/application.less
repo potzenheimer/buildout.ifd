@@ -1,59 +1,13 @@
 // Custom application specific styles
 //--------------------------------------
 
-body {
-    //background: @appGreenLight;
+
+// Move navbar when cms toolbar is present
+
+.app-toolbar + .app-navbar {
+    margin-top: @navbar-height;
 }
 
-// #ffffcc
-
-// ifd for providing a data image via stylesheet
-// Add this class to any element to provide some extend of visual noise
-.make-some-noise {
-    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
-}
-
-// ifd styles for a custom editbar override of the basic
-// twitter bootstarp navbar to make the edit bar look like a
-// browser toolbar
-body > header {
-    #editbar-wrapper + nav,
-    #toolbar + nav {
-        margin-top: @navbar-height;
-        .navbar-inner {
-            border-radius:0px;
-            .container {
-            }
-        }
-    }
-    // Active nav items
-    #main-nav .selected > a,
-    #main-nav .selected > a:hover,
-    #main-nav .selected > a:focus {
-      color: @navbar-link-active-color;
-      text-decoration: none;
-      background-color: @navbar-link-active-bg;
-      -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-         -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-              box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-    }
-    .navbar {
-      background-color: #fafafa;
-      background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
-      background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
-      background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
-      background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-      border: 1px solid #d4d4d4;
-      .box-shadow(0 1px 4px rgba(0,0,0,.065));
-    }
-    .navbar-brand {
-      max-width: 360px;
-      font-weight: 200;
-    }
-}
 
 #logo-wrapper {
   margin-bottom: @line-height-computed / 2;
