@@ -8,6 +8,7 @@ env.forward_agent = True
 env.port = '22222'
 env.user = 'root'
 env.hosts = ['zope8']
+env.hostname = 'zope8.kreativkombinat.de'
 env.webserver = '/opt/webserver/buildout.webserver'
 env.code_root = '/opt/sites/ifd/buildout.ifd'
 env.local_root = '/Users/cb/dev/ifd/buildout.ifd'
@@ -42,4 +43,4 @@ def rebuild():
 @task
 def get_data():
     """ Copy live database for local development """
-    project.db.download_data()
+    project.db.download()
