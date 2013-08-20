@@ -48,9 +48,9 @@
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
         <!-- CMSUI Editbar replacements -->
-        <drop css:theme="#editbar-wrapper"
+        <drop css:theme="#app-toolbar"
             css:if-content="#anon-personalbar" />
-        <replace css:theme="#editbar-wrapper"
+        <replace css:theme="#app-toolbar"
             css:content="#toolbar" />
 
         <!-- Logo (link target) -->
@@ -58,7 +58,7 @@
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
-            css:theme-children="#main-nav" />
+            css:theme-children="#app-navbar" />
 
         <!-- Document Content -->
         <replace css:content-children="#content" 
@@ -69,12 +69,10 @@
             css:theme-children="#below-main-content" />
         
         <replace css:content-children="#infobar"
-            css:theme-children="#sidebar-info" />
+            css:theme-children="#app-sidebar-info" />
         <!-- Columns -->
-        <replace css:content-children="#portal-column-one > *"
-            css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar" />
+            css:theme-children="#app-sidebar" />
 
         <replace css:content-children="#footer-infobar"
             css:theme-children="#footer-content" />

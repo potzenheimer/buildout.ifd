@@ -3,7 +3,7 @@
 
 
 // Move navbar when cms toolbar is present
-
+#toolbar + .app-navbar,
 .app-toolbar + .app-navbar {
     margin-top: @navbar-height;
 }
@@ -86,11 +86,8 @@
   margin-bottom: 0;
 }
 
-#infobox-blog-categories {
-  padding-top: @line-height-computed / 2;
-  .nav {
-    margin-left: @line-height-computed / 2;
-  }
+.blog-panel-categories {
+  margin-top: @line-height-computed / 2;
 }
 
 dl.portletTwitterPortlet {

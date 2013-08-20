@@ -3,20 +3,20 @@
 // --------------------------------------------------
 
 // Basic navbar
-.navbar {
-  #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg;);
-  border-radius: @navbar-border-radius;
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
+.app-navbar {
+    #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg;);
+    border-radius: 0;
+    @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+    .box-shadow(@shadow);
+    .navbar-brand,
+    .navbar-nav > li > a {
+        text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    }
+    .navbar-nav > .active > a {
+      background-color: @navbar-default-bg;
+    }
+}
 
-  .navbar-nav > .active > a {
-    background-color: @navbar-default-bg;
-  }
-}
-.navbar-brand,
-.navbar-nav > li > a {
-  text-shadow: 0 1px 0 rgba(255,255,255,.25);
-}
 
 // Inverted navbar
 .navbar-inverse {
@@ -37,47 +37,4 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   border-radius: 0;
-}
-
-
-// ifd styles for a custom editbar override of the basic
-// twitter bootstarp navbar to make the edit bar look like a
-// browser toolbar
-body > header {
-    #editbar-wrapper + nav,
-    #toolbar + nav {
-        margin-top: @navbar-height;
-        .navbar-inner {
-            border-radius:0px;
-            .container {
-            }
-        }
-    }
-    // Active nav items
-    #main-nav .selected > a,
-    #main-nav .selected > a:hover,
-    #main-nav .selected > a:focus {
-      color: @navbar-link-active-color;
-      text-decoration: none;
-      background-color: @navbar-link-active-bg;
-      -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-         -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-              box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-    }
-    .navbar {
-      background-color: #fafafa;
-      background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
-      background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
-      background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
-      background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-      border: 1px solid #d4d4d4;
-      .box-shadow(0 1px 4px rgba(0,0,0,.065));
-    }
-    .navbar-brand {
-      max-width: 360px;
-      font-weight: 200;
-    }
 }

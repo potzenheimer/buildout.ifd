@@ -82,6 +82,8 @@ class Renderer(base.Renderer):
     def blog_url(self):
         assignment_context = find_portlet_assignment_context(self.data,
                                                              self.context)
+        if assignment_context is None:
+            assignment_context = self.context
         return assignment_context.absolute_url()
 
     def count_entries(self, subject):
