@@ -8714,6 +8714,9 @@ dd.image-caption {
 .blog-panel-categories {
   margin-top: 10px;
 }
+.panel-body-archive .nav > li > a {
+  padding: 5px;
+}
 dl.portletTwitterPortlet dt.portletHeader {
   font-size: 15px;
 }

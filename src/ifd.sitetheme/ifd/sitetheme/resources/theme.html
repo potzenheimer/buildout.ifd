@@ -65,6 +65,7 @@
 </ul>    </div>
 </div>
       <nav class="navbar navbar-default app-navbar" role="navigation">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-app1-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -112,51 +113,48 @@
           <div class="visualClear">&nbsp;</div>
           <a class="twitter-timeline"  href="https://twitter.com/remSchwaben"  data-widget-id="344938176873385985" data-link-color="#cc0000" height="400" data-chrome="noborder" data-tweet-limit="3">Tweets von @remSchwaben</a>-->
           <aside class="sidebar" id="app-sidebar">
-            <div id="infobox-blog-categories" class="panel panel-default blog-panel-categories">
+            <div class="panel panel-default blog-panel-categories" id="infobox-blog-categories" >
     <div class="panel-heading">
          <span class="badge pull-right">66</span>
-        <a href="http://localhost:8499/ifd">Themen</a>
+        <a href="/">Themen</a>
     </div>
-    <div aria-labelledby="blogCategories" role="menu" class="list-group">
-        
-            <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Abschluss">
-                <span class="badge">1</span>
-                  <span>Abschluss</span>
-            </a>
-        
-        
-            <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Arbeiten%20mit%20Behinderung">
-                <span class="badge">15</span>
-                  <span>Arbeiten mit Behinderung</span>
-            </a>
-        
-        
-            <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Aus%20der%20Region">
-                <span class="badge">10</span>
-                  <span>Aus der Region</span>
-            </a>
-        
-        
-            <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Ausland">
-                <span class="badge">1</span>
-                  <span>Ausland</span>
-            </a>
-        
-        
-            <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Barrierefreiheit">
-                <span class="badge">2</span>
-                  <span>Barrierefreiheit</span>
-            </a>
-        
+    <div class="list-group panel-collapse collapse in"
+        aria-labelledby="blogCategories" role="menu">
+        <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Abschluss">
+            <span class="badge">1</span>
+              <span>Abschluss</span>
+        </a>
+        <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Arbeiten%20mit%20Behinderung">
+            <span class="badge">15</span>
+              <span>Arbeiten mit Behinderung</span>
+        </a>
+        <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Aus%20der%20Region">
+            <span class="badge">10</span>
+              <span>Aus der Region</span>
+        </a>
+        <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Ausland">
+            <span class="badge">1</span>
+              <span>Ausland</span>
+        </a>
+        <a class="list-group-item" role="menuitem" href="http://localhost:8499/ifd/blog-view?category=Barrierefreiheit">
+            <span class="badge">2</span>
+              <span>Barrierefreiheit</span>
+        </a>
+    
     </div>
-</div>             <div class="panel panel-default" id="infobox-blog-archive">
+</div>            <div class="panel panel-default" id="infobox-blog-archive">
     <div class="panel-heading">
-         <i class="icon-calendar"></i>
+        <button type="button" class="btn btn-link btn-xs pull-right" data-toggle="collapse" data-target="#blog-archive">
+            <i class="icon-expand"></i> einblenden
+        </button>
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#blogBoxTwo">
           Archiv
+        </a>
     </div>
-    <div class="panel-body">
+    <div class="panel-collapse collapse" id="blog-archive">
+        <div class="panel-body panel-body-archive">
         <h5>2013</h5>
-        <ul class="nav nav-list">
+        <ul class="nav nav-pills nav-stacked">
           <li>
                 <a href="http://localhost:8499/ifd/blog-view?year=2013&amp;month=5">
                     <span class="badge pull-right">1</span>
@@ -199,72 +197,8 @@
                 </a>
             </li>
         </ul>
-    </div>
-    <!--<div class="list-group">
-      <a href="#" class="list-group-item">
-        <span class="badge">1</span>
-        <span>Mai</span>
-      </a>
-       <a class="list-group-item" href="http://localhost:8499/ifd/blog-view?year=2013&amp;month=4">
-        <span class="badge">7</span>
-           <span class="archive-month">April</span>
-       </a>
-    </div>
-    <div class="panel-body">
         <h5>2012</h5>
-    </div>
-    <div class="list-group">
-      <a href="#" class="list-group-item">
-        <span class="badge">1</span>
-        <span>Januar</span>
-      </a>
-    </div>-->
-
-      <ul class="nav nav-list"><li class="nav-header">2013</li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2013&amp;month=5">
-                    <span class="badge pull-right">1</span>
-                    <span class="archive-month">Mai</span>
-                    <span class="archive-count">
-                        (1)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2013&amp;month=4">
-                    <span class="archive-month">April</span>
-                    <span class="archive-count">
-                        (7)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2013&amp;month=3">
-                    <span class="archive-month">März</span>
-                    <span class="archive-count">
-                        (5)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2013&amp;month=2">
-                    <span class="archive-month">Februar</span>
-                    <span class="archive-count">
-                        (2)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2013&amp;month=1">
-                    <span class="archive-month">Januar</span>
-                    <span class="archive-count">
-                        (3)
-                    </span>
-                </a>
-            </li>
-       
-        
-          <li class="nav-header">2012</li>
+        <ul class="nav nav-pills nav-stacked">
           <li>
                 <a href="http://localhost:8499/ifd/blog-view?year=2012&amp;month=12">
                     <span class="archive-month">Dezember</span>
@@ -297,78 +231,10 @@
                     </span>
                 </a>
             </li>
-       
-        
-          <li class="nav-header">2011</li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2011&amp;month=12">
-                    <span class="archive-month">Dezember</span>
-                    <span class="archive-count">
-                        (2)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2011&amp;month=11">
-                    <span class="archive-month">November</span>
-                    <span class="archive-count">
-                        (3)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2011&amp;month=10">
-                    <span class="archive-month">Oktober</span>
-                    <span class="archive-count">
-                        (3)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2011&amp;month=9">
-                    <span class="archive-month">September</span>
-                    <span class="archive-count">
-                        (4)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2011&amp;month=7">
-                    <span class="archive-month">Juli</span>
-                    <span class="archive-count">
-                        (3)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2011&amp;month=6">
-                    <span class="archive-month">Juni</span>
-                    <span class="archive-count">
-                        (4)
-                    </span>
-                </a>
-            </li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=2011&amp;month=5">
-                    <span class="archive-month">Mai</span>
-                    <span class="archive-count">
-                        (6)
-                    </span>
-                </a>
-            </li>
-       
-        
-          <li class="nav-header">1969</li>
-          <li>
-                <a href="http://localhost:8499/ifd/blog-view?year=1969&amp;month=12">
-                    <span class="archive-month">Dezember</span>
-                    <span class="archive-count">
-                        (3)
-                    </span>
-                </a>
-            </li>
-       
-      </ul></div>          </aside>
+        </ul>
+        </div>
+    </div>
+</div>          </aside>
         </div>
       </div>
     </section> <!-- /container -->
