@@ -15,7 +15,7 @@
     tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                 Batch python:modules['Products.CMFPlone'].Batch;
                 b_size python:15;b_start python:0;b_start request/b_start | b_start;
-                results view/blgitems;
+                results view/blogitems;
                 batch python:Batch(results, b_size, b_start);">
 
     <tal:block tal:repeat="item batch">
