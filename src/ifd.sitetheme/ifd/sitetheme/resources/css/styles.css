@@ -8342,6 +8342,10 @@ input[type="checkbox"] + label,
   display: inline-block;
   margin-left: 5px;
 }
+input[type="checkbox"] + label > .formHelp,
+.ArchetypesBooleanWidget label > .formHelp {
+  display: inline;
+}
 input.datetime-widget,
 select.datetime-widget,
 .ArchetypesCalendarWidget select {

@@ -94,6 +94,41 @@
         <replace css:content-children="#footer-infobar"
             css:theme-children="#footer-content" />
 
+        <replace css:content=".field">
+          <xsl:choose>
+              <xsl:when test="./input[@type='checkbox']|./input[@type='radio']">
+                  <div class="field form-group">
+                      <xsl:apply-templates select="./*[not(@type='radio' or @type='checkbox' or (local-name() = 'label' and preceding-sibling::input[@type='radio' or @type='checkbox']))]"/>
+                      <xsl:for-each select="./input[@type='checkbox']">
+                          <xsl:variable name="label" select="./following-sibling::label"/>
+                          <label for="option-one" class="app-checkbox">
+                              <xsl:copy-of select="$label/@for"/>
+                              <input>
+                                  <xsl:apply-templates select="./@*"/>
+                              </input>
+                              <xsl:value-of select="$label/text()"/>
+                          </label>
+                      </xsl:for-each>
+                      <xsl:for-each select="./input[@type='radio']">
+                          <xsl:variable name="label" select="./following-sibling::label"/>
+                          <label for="option-one" class="pure-radio">
+                              <xsl:copy-of select="$label/@for"/>
+                              <input>
+                                  <xsl:apply-templates select="./@*"/>
+                              </input>
+                              <xsl:value-of select="$label/text()"/>
+                          </label>
+                      </xsl:for-each>
+                  </div>            
+              </xsl:when>
+              <xsl:otherwise>
+                  <div class="field pure-control-group">
+                    <xsl:apply-templates select="./*"/>
+                  </div>
+              </xsl:otherwise>
+          </xsl:choose>
+        </replace>
+
     </rules>
 
 </rules>
