@@ -283,6 +283,7 @@
         </tal:use_iframe>
 
             <div id="login-forgotten-password"
+                class="hidden"
                  tal:condition="python:mail_password_url and use_normal">
                 <strong i18n:translate="box_forgot_password_option">
                     Forgot your password?
