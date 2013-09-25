@@ -21,6 +21,8 @@ var
 *.pyc
 *.pyo
 etc/**/*
+bower_components
+node_modules
 src/plone.app.blocks
 src/plone.app.tiles
 src/plone.tiles
