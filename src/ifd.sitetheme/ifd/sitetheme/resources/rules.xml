@@ -117,6 +117,7 @@
                                   <xsl:apply-templates select="./@*"/>
                               </input>
                               <xsl:value-of select="$label/text()"/>
+                              <xsl:value-of select="$label/span/text()"/>
                           </label>
                       </xsl:for-each>
                   </div>            

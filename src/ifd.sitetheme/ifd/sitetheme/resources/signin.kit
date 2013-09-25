@@ -1,0 +1,37 @@
+<!-- @include "_includes/head.kit" -->
+
+  <body class="signin">
+    <a href="#content" class="sr-only">Skip to content</a>
+    <section class="container app-content" id="app-content">
+        <section class="app-tile app-content-hero" id="app-content-hero">
+          <section class="page page-signin">
+            <header class="page-header">
+                <h1>
+                    Anmelden
+                   <small><a href="/" class="hero-link">IFD Schwaben</a></small>
+                </h1>
+            </header>
+            <article class="page-content" id="page-content"> 
+                <form class="enableAutoFocus" action="." id="login_form" method="post">
+                
+                    <div id="login-form">
+                        <div class="field">
+                            <label for="__ac_name">Benutzername</label>
+                            <input type="text" id="__ac_name" value="" name="__ac_name" size="15">
+                        </div>
+                        <div class="field">
+                                <label for="__ac_password">Passwort</label>
+                                <input type="password" id="__ac_password" name="__ac_password" size="15">
+                        </div>
+                        <div class="formControls text-right">
+                            <a class="btn btn-link btn-sm" href="http://127.0.0.1:8499/hph/mail_password_form?userid=">Passwort vergessen?</a>
+                            <input type="submit" value="Anmelden" name="submit" class="btn btn-primary btn-lg">
+                        </div>
+                    </div>
+                </form>
+            </article>
+          </section>
+        </section>
+    </section> <!-- /container app-content -->
+  </body>
+</html>
