@@ -8,6 +8,11 @@
     <!-- ifd to add minimal theme template for the
          tiles editiong overlays -->
     <theme href="minimal.html" if-path="@@edit-tile" />
+    <!-- Setup custom login form -->
+    <theme href="signin.html" css:if-content="body.template-login_form" />
+    <theme href="signin.html" css:if-content="body.template-logged_out" />
+    <theme href="signin.html" css:if-content="body.template-login_failed" />
+    <theme href="signin.html" css:if-content="body.template-mail_password_form" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -59,6 +64,18 @@
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
             css:theme-children="#app-navbar" />
+
+        <!-- Login form rules -->
+        <replace css:content-children="#content-core" 
+                css:theme-children="#page-content"
+                css:if-content="body.template-login_form" />
+        <replace css:content-children="#content-core" 
+                css:theme-children="#page-content"
+                css:if-content="body.template-logged_out" />
+        <replace css:content-children="#content" 
+                css:theme-children="#page-content"
+                css:if-content="body.template-mail_password_form" />
+
 
         <!-- Document Content -->
         <replace css:content-children="#content" 
