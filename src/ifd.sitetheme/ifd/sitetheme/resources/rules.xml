@@ -95,8 +95,8 @@
             css:theme-children="#content" />
 
         <before css:content=".portalMessage" css:theme="#content" />
-        <replace css:content-children="#viewlet-below-content"
-            css:theme-children="#below-main-content" />
+        <after css:content="#viewlet-below-content"
+            css:theme="#content" />
 
         <replace css:content-children="#infobar"
             css:theme-children="#app-sidebar-info" />
