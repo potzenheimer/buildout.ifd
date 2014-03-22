@@ -155,7 +155,32 @@ module.exports = function (grunt) {
         jekyll: {
             theme: {}
         },
-
+        sed: {
+            cleanAssets: {
+                path: 'dist/',
+                pattern: '../../assets/',
+                replacement: '../assets/',
+                recursive: true
+            },
+            cleanCSS: {
+                path: 'dist/',
+                pattern: '../dist/css/styles.css',
+                replacement: 'css/styles.css',
+                recursive: true
+            },
+            cleanJS: {
+                path: 'dist/',
+                pattern: '../dist/js/rms.js',
+                replacement: 'js/rms.min.js',
+                recursive: true
+            },
+            cleanLogo: {
+                path: 'dist/',
+                pattern: '../assets/img/logo.jpg',
+                replacement: 'assets/img/logo.jpg',
+                recursive: true
+            },
+        },
         validation: {
             options: {
                 charset: 'utf-8',
@@ -201,6 +226,12 @@ module.exports = function (grunt) {
     // Prepare distrubution
     grunt.registerTask('dist-init', '', function () {
         grunt.file.mkdir('dist/assets/');
+    });
+
+    // Copy jekyll generated templates and rename for diazo
+    grunt.registerTask('copy-templates', '', function () {
+        // grunt.file.copy('_site/index.html', 'dist/theme.html');
+        // grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
     });
 
     // Docs HTML validation task

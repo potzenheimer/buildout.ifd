@@ -1,33 +1,16 @@
 // Application specific
 // -------------------------
 
-@text-color:              #7b7a78;
-@brand-primary:           #e64c0e;
-
-// Font awesome
-
-@FontAwesomePath:       "../lib/font-awesome/font/";
-
-@icon-font-path:          @FontAwesomePath;
-@icon-font-name:          "FontAwesome";
+@app-primary:           #e64c0e;
+@app-text-color:        #7b7a78;
 
 
-// Set .form-control utility class to all form elements
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-    .form-control();
-}
+// Reset bootstrap variables
+@text-color:              @app-text-color;
+@brand-primary:           @app-primary;
+
+
+// Iconography
+// -------------------------
+// Font awesome font path
+@fa-font-path:    "../../assets/fonts";

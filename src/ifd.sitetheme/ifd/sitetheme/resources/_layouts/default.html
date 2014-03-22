@@ -1,0 +1,44 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
+    {% include toolbar.html %}
+    {% include navbar.html %}
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <div role="main">
+            {{ content }}
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="site-brand" id="logo-wrapper">
+            <a class="site-brand-logo" id="logo" href="/">
+              Integrationsfachdienst Schwaben</a>
+          </div>
+          <aside class="sidebar" id="app-sidebar-info">
+          </aside>
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ifdArbeit"  data-widget-id="344919453710053376" data-link-color="#cc0000" height="400" data-chrome="noborder" data-tweet-limit="3">Tweets von @ifdArbeit</a>
+          <div class="visualClear">&nbsp;</div>
+          <a class="twitter-timeline"  href="https://twitter.com/remSchwaben"  data-widget-id="344938176873385985" data-link-color="#cc0000" height="400" data-chrome="noborder" data-tweet-limit="3">Tweets von @remSchwaben</a>
+          <aside class="sidebar" id="app-sidebar">
+            {% include box-blog-categories.html %}
+            {% include box-blog-archive.html %}
+          </aside>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+    {% include javascript.html %}
+    <div class="app-js-slot">
+        {% include webfonts.html %}
+    </div>
+
+  </body>
+</html>

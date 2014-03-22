@@ -100,16 +100,6 @@
 dl.portletTwitterPortlet {
     dt.portletHeader {
         font-size: @font-size-base + 1;
-        .portletTopLeft:before {
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            display: inline-block;
-            text-decoration: inherit;
-            width: .8em;
-            content: "\f081";
-            *zoom: ~"expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf081;&nbsp;')";
-        }
     }
     .portletItem {
       padding: @line-height-computed / 2 0px;
@@ -121,7 +111,6 @@ dl.portletTwitterPortlet {
         .tweetBody {
           font-size: @font-size-small;
           font-weight: 300;
-          //#font > .shorthand(@fontSizeSmall,300,@line-height-computed - 6);
         }
       }
       .tweetDate {
