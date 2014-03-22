@@ -67,20 +67,38 @@ module.exports = function (grunt) {
             }
         },
 
-        recess: {
-            options: {
-                compile: true
-            },
-            theme: {
-                src: ['less/styles.less'],
-                dest: 'dist/css/styles.css'
-            },
-            min: {
+        less: {
+            compileTheme: {
                 options: {
-                    compress: true
+                    strictMath: false,
+                    sourceMap: true,
+                    outputSourceFiles: true,
+                    sourceMapURL: '<%= pkg.name %>.css.map',
+                    sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
                 },
-                src: ['less/styles.less'],
-                dest: 'dist/css/styles.min.css'
+                files: {
+                    'dist/css/<%= pkg.name %>.css': 'less/styles.less'
+                }
+            },
+            minify: {
+                options: {
+                    cleancss: true,
+                    report: 'min'
+                },
+                files: {
+                    'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css'
+                }
+            }
+        },
+
+        csscomb: {
+            sort: {
+                options: {
+                    config: 'less/.csscomb.json'
+                },
+                files: {
+                    'dist/css/<%= pkg.name %>.css': ['dist/css/<%= pkg.name %>.css']
+                }
             }
         },
 
@@ -98,6 +116,16 @@ module.exports = function (grunt) {
                 cwd: 'bower_components/',
                 src: ['bootstrap/assets/ico/*'],
                 dest: 'assets/ico/'
+            }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'dist/assets/img/'
+                }]
             }
         },
         rev: {
@@ -130,10 +158,17 @@ module.exports = function (grunt) {
 
         validation: {
             options: {
-                reset: true
+                charset: 'utf-8',
+                doctype: 'HTML5',
+                failHard: true,
+                reset: true,
+                relaxerror: [
+                    'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
+                    'Element img is missing required attribute src.'
+                ]
             },
             files: {
-                src: ['_gh_pages/**/*.html']
+                src: ['_site/**/*.html']
             }
         },
 
@@ -146,65 +181,65 @@ module.exports = function (grunt) {
                 files: '<%= jshint.test.src %>',
                 tasks: ['jshint:test', 'qunit']
             },
-            recess: {
+            less: {
                 files: 'less/*.less',
-                tasks: ['recess']
-            },
-            templates: {
-                files: '*.html',
-                tasks: ['jekyll:theme']
+                tasks: ['less']
             }
+        },
+        concurrent: {
+            cj: ['less', 'copy', 'concat', 'uglify'],
+            ha: ['jekyll:theme', 'copy-templates', 'sed']
         }
     });
 
 
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-qunit');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-html-validation');
-    grunt.loadNpmTasks('grunt-jekyll');
-    grunt.loadNpmTasks('grunt-recess');
-    grunt.loadNpmTasks('grunt-rev');
-    grunt.loadNpmTasks('browserstack-runner');
+    // -------------------------------------------------
+    // These are the available tasks provided
+    // Run them in the Terminal like e.g. grunt dist-css
+    // -------------------------------------------------
+
+    // Prepare distrubution
+    grunt.registerTask('dist-init', '', function () {
+        grunt.file.mkdir('dist/assets/');
+    });
 
     // Docs HTML validation task
     grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
+    // Javascript Unittests
+    grunt.registerTask('unit-test', ['qunit']);
+
     // Test task.
-    var testSubtasks = ['dist-css', 'jshint', 'qunit', 'validate-html'];
-    // Only run BrowserStack tests under Travis
-    if (process.env.TRAVIS) {
-      // Only run BrowserStack tests if this is a mainline commit in twbs/bootstrap, or you have your own BrowserStack key
-        if ((process.env.TRAVIS_REPO_SLUG === 'twbs/bootstrap' && process.env.TRAVIS_PULL_REQUEST === 'false') || process.env.TWBS_HAVE_OWN_BROWSERSTACK_KEY) {
-            testSubtasks.push('browserstack_runner');
-        }
-    }
+    grunt.registerTask('test-js', ['jshint', 'jscs']);
+    var testSubtasks = ['dist-css', 'jshint', 'validate-html'];
+
     grunt.registerTask('test', testSubtasks);
 
     // JS distribution task.
-    grunt.registerTask('dist-js', ['concat', 'uglify']);
+    grunt.registerTask('dist-js', ['concat', 'newer:uglify']);
 
     // CSS distribution task.
-    grunt.registerTask('dist-css', ['recess']);
+    grunt.registerTask('less-compile', ['less:compileTheme']);
+    grunt.registerTask('dist-css', ['less-compile', 'csscomb', 'less:minify']);
 
     // Assets distribution task.
-    grunt.registerTask('dist-assets', ['copy']);
+    grunt.registerTask('dist-assets', ['newer:copy', 'newer:imagemin']);
 
     // Cache buster distribution task.
     grunt.registerTask('dist-cb', ['rev']);
 
     // Template distribution task.
-    grunt.registerTask('dist-templates', ['jekyll:theme']);
+    grunt.registerTask('dist-html', ['jekyll:theme', 'copy-templates', 'sed']);
+
+    // Concurrent distribution task
+    grunt.registerTask('dist-cc', ['test', 'concurrent:cj', 'concurrent:ha']);
+
+    // Development task.
+    grunt.registerTask('dev', ['less-compile', 'dist-js', 'dist-html']);
 
     // Full distribution task.
-    grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
+    grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-html', 'dist-assets']);
 
     // Default task.
-    grunt.registerTask('default', ['test', 'dist']);
+    grunt.registerTask('default', ['dev']);
 };
