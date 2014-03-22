@@ -15,7 +15,7 @@
 
   <!-- Grok the package to initialise schema interfaces and content classes -->
   <grok:grok package="." />
-  
+
   <i18n:registerTranslations directory="locales" />
 
   <!-- Register an extension profile to make the product installable
@@ -35,5 +35,7 @@
       class=".conversation.ConversationView"
       permission="zope2.View"
       />
+
+  <adapter factory=".subjects.SubjectsFieldWidget" />
 
 </configure>
