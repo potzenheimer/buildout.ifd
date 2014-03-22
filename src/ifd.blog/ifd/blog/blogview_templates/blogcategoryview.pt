@@ -19,14 +19,14 @@
         <a href="" class="link-clear-filter"
           tal:define="portal_url context/portal_url"
           tal:attributes="href python:portal_url + '/blog'">
-          <i class="icon-remove-sign" />
+          <i class="fa fa-times"></i>
           Filter entfernen</a>
     </small>
     <p class="lead" tal:condition="category">Alle Artikel zum Thema
         <span tal:content="category" />
     </p>
   </header>
-  
+
   <div id="content-core">
   <section id="blog-view"
     class="blog-list visualClear"
@@ -54,7 +54,7 @@
           <footer>
             <a href="" class="xlink-more xpull-right"
               tal:attributes="href item/getURL">
-              <i class="icon-chevron-sign-right"></i>
+              <i class="icon-chevron-right"></i>
               Weiterlesen</a>
           </footer>
       </article>

@@ -1,7 +1,7 @@
 <div class="panel panel-default" id="infobox-blog-archive" i18n:domain="ifd.blog">
     <div class="panel-heading">
         <button type="button" class="btn btn-link btn-xs pull-right" data-toggle="collapse" data-target="#blog-archive">
-            <i class="icon-expand"></i> einblenden
+            <i class="fa fa-expand"></i> einblenden
         </button>
         <i18n:block translate="">Blog Archive</i18n:block>
     </div>

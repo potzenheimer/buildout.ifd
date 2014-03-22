@@ -24,7 +24,7 @@
       data-appui="tooltip"
       data-placement="bottom"
       data-original-title="Abonnieren Sie einen stehts aktuellen RSS Feed">
-      <i class="icon-rss icon-2x"></i>
+      <i class="fa fa-rss fa-2x"></i>
     </a>
   </div>
   <section
@@ -59,7 +59,7 @@
           <footer>
           <a href="" class="link-more xpull-right"
             tal:attributes="href item/getURL">
-            Weiterlesen <i class="icon-caret-right" /></a>
+            Weiterlesen <i class="fa fa-caret-right"></i></a>
           </footer>
       </article>
     </tal:block>

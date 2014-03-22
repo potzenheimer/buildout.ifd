@@ -31,14 +31,14 @@
         <footer>
           <a href="" class="link-more xpull-right"
             tal:attributes="href item/getURL">
-            Weiterlesen <i class="icon-caret-right" /></a>
+            Weiterlesen <i class="fa fa-caret-right"></i></a>
         </footer>
       </article>
     </tal:block>
     <div metal:use-macro="context/batch_macros/macros/navigation" />
 
   </section>
-    
+
   </metal:content-core>
 </metal:main>
 

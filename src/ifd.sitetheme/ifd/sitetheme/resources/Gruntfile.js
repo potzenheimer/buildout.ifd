@@ -107,17 +107,24 @@ module.exports = function (grunt) {
                 expand: true,
                 flatten: true,
                 cwd: 'bower_components/',
-                src: ['font-awesome/font/*'],
-                dest: 'assets/fonts/'
+                src: ['font-awesome/fonts/*'],
+                dest: 'dist/assets/fonts/'
             },
             ico: {
                 expand: true,
                 flatten: true,
                 cwd: 'bower_components/',
-                src: ['bootstrap/assets/ico/*'],
-                dest: 'assets/ico/'
+                src: ['assets/ico/*'],
+                dest: 'dist/assets/ico/'
+            },
+            images: {
+                expand: true,
+                flatten: true,
+                src: ['assets/img/*'],
+                dest: 'dist/assets/img/'
             }
         },
+
         imagemin: {
             dynamic: {
                 files: [{
@@ -156,7 +163,7 @@ module.exports = function (grunt) {
             theme: {}
         },
         sed: {
-            cleanAssets: {
+            cleanSourceAssets: {
                 path: 'dist/',
                 pattern: '../../assets/',
                 replacement: '../assets/',
@@ -164,14 +171,14 @@ module.exports = function (grunt) {
             },
             cleanCSS: {
                 path: 'dist/',
-                pattern: '../dist/css/styles.css',
-                replacement: 'css/styles.css',
+                pattern: '../dist/css/ifd.css',
+                replacement: 'css/ifd.css',
                 recursive: true
             },
             cleanJS: {
                 path: 'dist/',
-                pattern: '../dist/js/rms.js',
-                replacement: 'js/rms.min.js',
+                pattern: '../dist/js/ifd.js',
+                replacement: 'js/ifd.min.js',
                 recursive: true
             },
             cleanLogo: {
@@ -230,8 +237,8 @@ module.exports = function (grunt) {
 
     // Copy jekyll generated templates and rename for diazo
     grunt.registerTask('copy-templates', '', function () {
-        // grunt.file.copy('_site/index.html', 'dist/theme.html');
-        // grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
+        grunt.file.copy('_site/index.html', 'dist/theme.html');
+        grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
     });
 
     // Docs HTML validation task
@@ -254,6 +261,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dist-css', ['less-compile', 'csscomb', 'less:minify']);
 
     // Assets distribution task.
+    grunt.registerTask('copy-assets', ['copy']);
     grunt.registerTask('dist-assets', ['newer:copy', 'newer:imagemin']);
 
     // Cache buster distribution task.

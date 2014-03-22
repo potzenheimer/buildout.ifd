@@ -1,40 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <base />
-    <title>Example Theme, based on Twitter Bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-<link href="less/styles.less" rel="stylesheet/less" type="text/css">    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-<script data-ui="development" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-<script data-ui="development" type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
-<script data-ui="development" type="text/javascript" src="assets/js/less-1.4.1.min.js"></script>
-<script data-ui="development" src="assets/js/bootstrap.min.js"></script>
-<script data-ui="development" src="js/application.js"></script>  </head>
-  <body>
-  
-  <body class="signin">
-    <a href="#content" class="sr-only">Skip to content</a>
-    <section class="container app-content" id="app-content">
-        <section class="app-tile app-content-hero" id="app-content-hero">
+---
+layout: simple
+title: Sign in
+slug: signin
+base_url: "../../"
+---
+<main class="app-content-body">
+  <div class="container">
+    <section class="app-tile app-signin" id="app-signin">
           <section class="page page-signin">
             <header class="page-header">
                 <h1>
                     Anmelden
-                   <small><a href="/" class="hero-link">IFD Schwaben</a></small>
                 </h1>
             </header>
-            <article class="page-content" id="page-content"> 
+            <article class="page-content" id="app-signin-content">
                 <form class="enableAutoFocus" action="." id="login_form" method="post">
-                
                     <div id="login-form">
                         <div class="field">
                             <label for="__ac_name">Benutzername</label>
@@ -45,7 +25,7 @@
                                 <input type="password" id="__ac_password" name="__ac_password" size="15">
                         </div>
                         <div class="formControls text-right">
-                            <a class="btn btn-link btn-sm" href="http://127.0.0.1:8499/hph/mail_password_form?userid=">Passwort vergessen?</a>
+                            <a class="btn btn-link btn-sm" href="/mail_password_form?userid=">Passwort vergessen?</a>
                             <input type="submit" value="Anmelden" name="submit" class="btn btn-primary btn-lg">
                         </div>
                     </div>
@@ -53,6 +33,5 @@
             </article>
           </section>
         </section>
-    </section> <!-- /container app-content -->
-  </body>
-</html>
+  </div>
+</main>
