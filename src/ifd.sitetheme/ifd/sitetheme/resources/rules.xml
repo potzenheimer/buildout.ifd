@@ -64,7 +64,7 @@
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
-            css:theme-children="#app-navbar-main" />
+            css:theme-children="#app-navbar-nav" />
 
         <!-- Login form rules -->
         <replace css:content-children="#content-core"
