@@ -45,7 +45,7 @@
         <!-- Custom favicon implementation -->
         <drop content="link[@type='image/x-icon']" />
         <after theme="/html/head">
-            <link rel="shortcut icon" href="/++theme++ifd.sitetheme/dist/img/favicon.ico" type="images/x-icon" />
+            <link rel="shortcut icon" href="/++theme++ifd.sitetheme/dist/assets/img/favicon.ico" type="images/x-icon" />
         </after>
 
         <!-- Copy over the id/class attributes on the body tag.
