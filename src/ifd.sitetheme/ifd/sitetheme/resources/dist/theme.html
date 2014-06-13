@@ -289,7 +289,7 @@ window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 </script>
     <div class="app-js-slot">
-        <script type="text/javascript">
+      <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Open+Sans:400,600,700,300:latin' ] }
   };
@@ -303,6 +303,19 @@ else window.onload = downloadJSAtOnload;
     s.parentNode.insertBefore(wf, s);
   })();
 </script>
+      <script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://tkr.ade25.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 110]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://tkr.ade25.de/piwik.php?idsite=110" style="border:0;" alt="" /></p></noscript>
     </div>
 
   </body>
