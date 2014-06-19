@@ -10,6 +10,12 @@
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
 
+  <div class="blog-header">
+    <h1 class="documentFirstHeading">
+      Blog
+    </h1>
+  </div>
+
   <section id="blog-view"
     tal:condition="view/blogitems"
     tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;

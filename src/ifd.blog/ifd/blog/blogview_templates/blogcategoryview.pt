@@ -58,7 +58,6 @@
               Weiterlesen</a>
           </footer>
       </article>
-      <hr>
     </tal:block>
     </tal:entries>
   </section>

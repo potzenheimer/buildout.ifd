@@ -10,14 +10,12 @@
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
 
-  <!--<header class="xpage-header" id="blog-header">
-    <h1>Integrationsfachdienst Schwaben
+  <div class="blog-header">
+    <h1 class="documentFirstHeading">
+      Blog
     </h1>
-  </header>-->
+  </div>
 
-<!--
-  <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/introduction" />
--->
   <div id="rss-link" class="pull-right"
     tal:define="portal_url context/portal_url;">
     <a href="" tal:attributes="href python:portal_url + '/ifd/RSS'"
