@@ -15,8 +15,15 @@
     .navbar-nav > .active > a {
       background-color: @navbar-default-bg;
     }
+    .navbar-nav > .selected > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+  }
 }
-
 
 // Inverted navbar
 .navbar-inverse {

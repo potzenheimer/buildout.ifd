@@ -1,6 +1,9 @@
 // Custom application specific styles
 //--------------------------------------
 
+.visualClear {
+  clear: both;
+}
 
 // Move navbar when cms toolbar is present
 #toolbar + .app-navbar,
@@ -20,6 +23,11 @@
     text-indent: -99999px;
     overflow: hidden;
   }
+}
+
+.sidebar-info {
+  padding-top: @line-height-computed;
+  padding-bottom: @line-height-computed;
 }
 
 #site-wrapper {
@@ -94,6 +102,14 @@
     .nav > li > a {
         padding: @padding-small-vertical;
     }
+}
+
+// Plone image browser usability fix
+
+#plonebrowser {
+  #footer {
+    position: relative;
+  }
 }
 
 
