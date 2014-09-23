@@ -1,16 +1,16 @@
+# -*- coding: utf-8 -*-
+"""Module providing filterable blog entry listings"""
+
 import calendar
 from Acquisition import aq_inner
 from DateTime import DateTime
-from five import grok
-
+from Products.CMFCore.interfaces import IFolderish
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.PloneBatch import Batch
-
-from plone.app.discussion.interfaces import IConversation
+from five import grok
 from plone.app.contentlisting.interfaces import IContentListing
-
+from plone.app.discussion.interfaces import IConversation
 from plone.app.layout.navigation.interfaces import INavigationRoot
-from Products.CMFCore.interfaces import IFolderish
 
 from ifd.blog.blogentry import IBlogEntry
 
@@ -94,12 +94,10 @@ class BlogCategoryView(grok.View):
         return len(conversation)
 
     def _base_query(self):
-        context = aq_inner(self.context)
         obj_provides = IBlogEntry.__identifier__
-        path = '/'.join(context.getPhysicalPath())
-        return dict(path={'query': path, 'depth': 2},
-                    object_provides=obj_provides,
-                    sort_on='effective', sort_order='reverse')
+        return dict(object_provides=obj_provides,
+                    sort_on='effective',
+                    sort_order='reverse')
 
     def get_entries(self, year=None, month=None, subject=None):
         context = aq_inner(self.context)
